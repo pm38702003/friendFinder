@@ -1,0 +1,15 @@
+body {
+    background-image: url("../assets/concrete_seamless.png");
+    background-size: cover;
+    background-position: center;
+    z-index: -10;
+    background-position-y: bottom;
+}
+ 
+.jumbotron{
+    margin-top:100px;
+    
+    border-width:1px;
+    border-style:solid; 
+    border-color: #006D91;  
+} 
