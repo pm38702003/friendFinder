@@ -6,13 +6,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Survey</title>
-    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" type="text/css" href="../css/reset.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
         crossorigin="anonymous">
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
 </head>
 
 <body>
+    <div class="modal fade" id="resultModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Your Match!!!</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <img src=" " id="modalImage" alt="Smiley face" height="42" width="42">
+                    <p id="resultsP">
+                        this a test
+                    </p>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="container">
         <div class="jumbotron">
             <h2>Survey Questions</h2>
@@ -138,7 +161,6 @@
                         <option>5 (Strongly Agree)</option>
                     </select>
                 </div>
-
                 <button type="submit" id="submitButton" class="btn btn-primary">Submit</button>
             </form>
         </div>
@@ -152,31 +174,40 @@
         $(document).ready(function () {
 
             $("#submitButton").on("click", function (event) {
-               
                 event.preventDefault();
-
                 var newFriend = {
                     name: $("#nameInput").val().trim(),
                     photo: $("#photoInput").val().trim(),
-                    scores:[]
+                    scores: []
                 };
                 newFriend.scores.push($("#select1").val(), $("#select2").val(), $("#select3").val(), $("#select4").val(), $("#select5").val(),
                     $("#select6").val(), $("#select7").val(), $("#select8").val(), $("#select9").val(), $("#select10").val());
-                newFriend.scores.forEach(function(item, i) { if (item == "1 (Strongly Disagree)") newFriend.scores[i] = 1; });
-                newFriend.scores.forEach(function(item, i) { if (item == "5 (Strongly Agree)") newFriend.scores[i] = 5; });  
 
-                alert(newFriend.name+ "  "+ newFriend.photo +"  "+ newFriend.scores)
+                newFriend.scores.forEach(function (item, i) {
+                    if (item == "1 (Strongly Disagree)") {
+                        newFriend.scores[i] = 1;
+                    }
+                    if (item == "5 (Strongly Agree)") {
+                        newFriend.scores[i] = 5;
+                    }
+                });
+
                 $.post("/api/friends", newFriend)
                     .then(function (data) {
-                        console.log(data);
-                        alert("ne friends!");
+                        //open modal and show data
+                        console.log("back in clients " + JSON.stringify(data));
+                        console.log("back in clients name-->" + data.name);
+                        console.log("back in clients url-->" + data.photo);
+                        // $('#resultsP').text(data.name);
+                        $('#resultModal').modal('show');
+                        $('#resultsP').text(data.name);
+                        $('#modalImage').attr('src', data.photo)
+
                     })
             });
         });
 
     </script>
-
-
 
 </body>
 

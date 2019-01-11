@@ -1,8 +1,23 @@
 const friends = [
-
     {
-        name: "Ahmed",
-        photo: "https://pixel.nymag.com/imgs/daily/science/2016/05/20/20-emily-ratajkowski.w700.h467.jpg",
+        name: "Patrick Murray",
+        photo: "https://diygrantsonline.com.au/wp-content/uploads/2017/07/user4.png",
+        scores: [
+            "3",
+            "2",
+            "1",
+            "1",
+            "1",
+            "2",
+            "3",
+            "3",
+            "2",
+            "5"
+        ]
+    },
+    {
+        name: "Ian Walston",
+        photo: "https://diygrantsonline.com.au/wp-content/uploads/2017/07/user4.png",
         scores: [
             "5",
             "1",
@@ -17,23 +32,85 @@ const friends = [
         ]
     },
     {
-        name: "Eric",
-        photo: "https://pixel.nymag.com/imgs/daily/science/2016/05/20/20-emily-ratajkowski.w700.h467.jpg",
+        name: "Prudence Codjia",
+        photo: "https://diygrantsonline.com.au/wp-content/uploads/2017/07/user4.png",
         scores: [
             "5",
+            "3",
             "1",
             "4",
-            "4",
+            "2",
+            "1",
             "5",
+            "3",
+            "3",
+            "4"
+        ]
+    },
+    {
+        name: "Bill Tumurbaatar",
+        photo: "https://diygrantsonline.com.au/wp-content/uploads/2017/07/user4.png",
+        scores: [
+            "3",
+            "3",
             "1",
             "2",
+            "4",
+            "2",
+            "3",
+            "4",
+            "1",
+            "2"
+        ]
+    },
+    {
+        name: "Rafael Trevino",
+        photo: "https://diygrantsonline.com.au/wp-content/uploads/2017/07/user4.png",
+        scores: [
+            "4",
+            "4",
+            "3",
+            "2",
+            "1",
+            "5",
+            "2",
+            "4",
+            "3",
+            "2"
+        ]
+    },
+    {
+        name: "Jared Nielsen",
+        photo: "https://diygrantsonline.com.au/wp-content/uploads/2017/07/user4.png",
+        scores: [
+            "2",
+            "2",
+            "1",
+            "5",
+            "3",
+            "1",
+            "2",
+            "3",
+            "5",
+            "1"
+        ]
+    },
+    {
+        name: "Nicolas Xanttopoulos",
+        photo: "https://diygrantsonline.com.au/wp-content/uploads/2017/07/user4.png",
+        scores: [
             "5",
             "4",
-            "1"
+            "1",
+            "2",
+            "4",
+            "3",
+            "1",
+            "5",
+            "4",
+            "2"
         ]
     }
 ];
 
-
-console.log(friends);
 exports.list = friends;
