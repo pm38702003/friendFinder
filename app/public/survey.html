@@ -9,10 +9,9 @@
    
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
         crossorigin="anonymous">
-    <link rel = "stylesheet" href = "./css/style.css"/>  
+    <!-- <link rel = "stylesheet" href = "./css/style.css"/>   -->
 </head>
-
-<body>
+<body style="background-image: url('https://opengameart.org/sites/default/files/styles/medium/public/2_17.png')" ></body>
     <div class="modal fade" id="resultModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
         aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
@@ -200,14 +199,15 @@
                 $.post("/api/friends", newFriend)
                     .then(function (data) {
                         //open modal and show data
-                        console.log("back in clients " + JSON.stringify(data));
-                        console.log("back in clients name-->" + data.name);
-                        console.log("back in clients url-->" + data.photo);
+                       // console.log("back in clients " + JSON.stringify(data));
+                       // console.log("back in clients name-->" + data.name);
+                       // console.log("back in clients url-->" + data.photo);
                         // $('#resultsP').text(data.name);
                         $('#resultModal').modal('show');
                         $('#resultsP').text(data.name);
                         $('#modalImage').attr('src', data.photo);
                     })
+                      
             });
         });
 
