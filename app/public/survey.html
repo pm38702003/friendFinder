@@ -6,10 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Survey</title>
-    <link rel="stylesheet" type="text/css" href="../css/reset.css">
+   
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
         crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <link rel = "stylesheet" href = "./css/style.css"/>  
 </head>
 
 <body>
@@ -19,7 +19,7 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title" id="exampleModalLongTitle">Your Match!!!</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <button type="button" class="close closeModal" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
@@ -31,7 +31,7 @@
 
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-secondary closeModal" data-dismiss="modal">Close</button>
                 </div>
             </div>
         </div>
@@ -172,6 +172,11 @@
 
     <script type="text/javascript">
         $(document).ready(function () {
+            $('.closeModal').on("click", function (event) {
+                 setTimeout(function(){window.location.href="/"},1500)    
+                   // window.location.replace("/");
+                              
+            });
 
             $("#submitButton").on("click", function (event) {
                 event.preventDefault();
@@ -201,8 +206,7 @@
                         // $('#resultsP').text(data.name);
                         $('#resultModal').modal('show');
                         $('#resultsP').text(data.name);
-                        $('#modalImage').attr('src', data.photo)
-
+                        $('#modalImage').attr('src', data.photo);
                     })
             });
         });
