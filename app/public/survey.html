@@ -6,212 +6,247 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Survey</title>
-   
+
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
         crossorigin="anonymous">
     <!-- <link rel = "stylesheet" href = "./css/style.css"/>   -->
 </head>
-<body style="background-image: url('https://opengameart.org/sites/default/files/styles/medium/public/2_17.png')" ></body>
-    <div class="modal fade" id="resultModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
-        aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLongTitle">Your Match!!!</h5>
-                    <button type="button" class="close closeModal" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <img src=" " id="modalImage" alt="Smiley face" height="42" width="42">
-                    <p id="resultsP">
-                        this a test
-                    </p>
 
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary closeModal" data-dismiss="modal">Close</button>
-                </div>
+<body style="background-image: url('https://opengameart.org/sites/default/files/styles/medium/public/2_17.png')"></body>
+<div class="modal fade" id="resultModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">Your Match!!!</h5>
+                <button type="button" class="close closeModal" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <img src=" " id="modalImage" alt="Smiley face" height="42" width="42">
+                <p id="resultsP">
+                    this a test
+                </p>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary closeModal" data-dismiss="modal">Close</button>
             </div>
         </div>
     </div>
-    <div class="container">
-        <div class="jumbotron">
-            <h2>Survey Questions</h2>
+</div>
+<div class="container">
+    <div class="jumbotron">
+        <h2>Survey Questions</h2>
+        <hr>
+        <form>
+            <div class="form-group">
+                <label for="nameInput">Name (Required)</label>
+                <input type="text" class="form-control" id="nameInput" aria-describedby="emailHelp" placeholder="enter name"
+                    required>
+            </div>
+            <div class="form-group">
+                <label for="photoInput">Link to Photo image (Required)</label>
+                <input type="text" class="form-control" id="photoInput" placeholder="photo link" required>
+            </div>
             <hr>
-            <form>
-                <div class="form-group">
-                    <label for="nameInput">Name (Required)</label>
-                    <input type="text" class="form-control" id="nameInput" aria-describedby="emailHelp" placeholder="enter name"
-                        required>
-                </div>
-                <div class="form-group">
-                    <label for="photoInput">Link to Photo image (Required)</label>
-                    <input type="text" class="form-control" id="photoInput" placeholder="photo link" required>
-                </div>
-                <hr>
-                <div class="form-group">
-                    <label for="select1">Do you smoke? </label>
-                    <select class="form-control" id="select1" required>
-                        <option disabled selected value> -- select an option -- </option>
-                        <option>1 (Strongly Disagree)</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                        <option>5 (Strongly Agree)</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="select2">Do you drink beer?</label>
-                    <select class="form-control" id="select2" required>
-                        <option disabled selected value> -- select an option -- </option>
-                        <option>1 (Strongly Disagree)</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                        <option>5 (Strongly Agree)</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="select3">Do you like dogs?</label>
-                    <select class="form-control" id="select3" required>
-                        <option disabled selected value> -- select an option -- </option>
-                        <option>1 (Strongly Disagree)</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                        <option>5 (Strongly Agree)</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="select4">Do you like football?</label>
-                    <select class="form-control" id="select4" required>
-                        <option disabled selected value> -- select an option -- </option>
-                        <option>1 (Strongly Disagree)</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                        <option>5 (Strongly Agree)</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="select1">Do you like to travel?</label>
-                    <select class="form-control" id="select5" required>
-                        <option disabled selected value> -- select an option -- </option>
-                        <option>1 (Strongly Disagree)</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                        <option>5 (Strongly Agree)</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="select1">Do you howl at the moon?</label>
-                    <select class="form-control" id="select6" required>
-                        <option disabled selected value> -- select an option -- </option>
-                        <option>1 (Strongly Disagree)</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                        <option>5 (Strongly Agree)</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="select1">Do you snore?</label>
-                    <select class="form-control" id="select7" required>
-                        <option disabled selected value> -- select an option -- </option>
-                        <option>1 (Strongly Disagree)</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                        <option>5 (Strongly Agree)</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="select1">Do you eat ice-cream?</label>
-                    <select class="form-control" id="select8" required>
-                        <option disabled selected value> -- select an option -- </option>
-                        <option>1 (Strongly Disagree)</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                        <option>5 (Strongly Agree)</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="select1">Do you dance like no one is watching?</label>
-                    <select class="form-control" id="select9" required>
-                        <option disabled selected value> -- select an option -- </option>
-                        <option>1 (Strongly Disagree)</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                        <option>5 (Strongly Agree)</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="select1">The Dallas Cowboys suck?</label>
-                    <select class="form-control" id="select10" required>
-                        <option disabled selected value> -- select an option -- </option>
-                        <option>1 (Strongly Disagree)</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                        <option>5 (Strongly Agree)</option>
-                    </select>
-                </div>
-                <button type="submit" id="submitButton" class="btn btn-primary">Submit</button>
-            </form>
-        </div>
+            <div class="form-group">
+                <label for="select1">Do you smoke? </label>
+                <select class="form-control" id="select1" required>
+                    <option disabled selected value> -- select an option -- </option>
+                    <option>1 (Strongly Disagree)</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5 (Strongly Agree)</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="select2">Do you drink beer?</label>
+                <select class="form-control" id="select2" required>
+                    <option disabled selected value> -- select an option -- </option>
+                    <option>1 (Strongly Disagree)</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5 (Strongly Agree)</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="select3">Do you like dogs?</label>
+                <select class="form-control" id="select3" required>
+                    <option disabled selected value> -- select an option -- </option>
+                    <option>1 (Strongly Disagree)</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5 (Strongly Agree)</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="select4">Do you like football?</label>
+                <select class="form-control" id="select4" required>
+                    <option disabled selected value> -- select an option -- </option>
+                    <option>1 (Strongly Disagree)</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5 (Strongly Agree)</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="select1">Do you like to travel?</label>
+                <select class="form-control" id="select5" required>
+                    <option disabled selected value> -- select an option -- </option>
+                    <option>1 (Strongly Disagree)</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5 (Strongly Agree)</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="select1">Do you howl at the moon?</label>
+                <select class="form-control" id="select6" required>
+                    <option disabled selected value> -- select an option -- </option>
+                    <option>1 (Strongly Disagree)</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5 (Strongly Agree)</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="select1">Do you snore?</label>
+                <select class="form-control" id="select7" required>
+                    <option disabled selected value> -- select an option -- </option>
+                    <option>1 (Strongly Disagree)</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5 (Strongly Agree)</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="select1">Do you eat ice-cream?</label>
+                <select class="form-control" id="select8" required>
+                    <option disabled selected value> -- select an option -- </option>
+                    <option>1 (Strongly Disagree)</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5 (Strongly Agree)</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="select1">Do you dance like no one is watching?</label>
+                <select class="form-control" id="select9" required>
+                    <option disabled selected value> -- select an option -- </option>
+                    <option>1 (Strongly Disagree)</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5 (Strongly Agree)</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="select1">The Dallas Cowboys suck?</label>
+                <select class="form-control" id="select10" required>
+                    <option disabled selected value> -- select an option -- </option>
+                    <option>1 (Strongly Disagree)</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5 (Strongly Agree)</option>
+                </select>
+            </div>
+            <button type="submit" id="submitButton" class="btn btn-primary">Submit</button>
+        </form>
     </div>
+</div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
 
-    <script type="text/javascript">
-        $(document).ready(function () {
-            $('.closeModal').on("click", function (event) {
-                 setTimeout(function(){window.location.href="/"},1500)    
-                   // window.location.replace("/");
-                              
+<script type="text/javascript">
+    
+        $('.closeModal').on("click", function (event) {
+            event.preventDefault();
+             setTimeout(function () { window.location.href = "/" }, 1500)
+           //   window.location.replace("/");
+        });
+
+        $("#submitButton").on("click", function (event) {
+           event.preventDefault();
+
+           function validate() { 
+                validFlag = true;
+                if ($("#nameInput").val().trim() == "") { validFlag = false }
+                if ($("#photoInput").val().trim() == "") { validFlag = false }
+               
+                if( $("#select1").val() == null) { validFlag = false }
+                if( $("#select2").val() == null) { validFlag = false }
+                if( $("#select2").val() == null) { validFlag = false }
+                if( $("#select3").val() == null) { validFlag = false }
+                if( $("#select4").val() == null) { validFlag = false }
+                if( $("#select5").val() == null) { validFlag = false }
+                if( $("#select6").val() == null) { validFlag = false }
+                if( $("#select7").val() == null) { validFlag = false }
+                if( $("#select8").val() == null) { validFlag = false }
+                if( $("#select9").val() == null) { validFlag = false }
+                if( $("#select10").val() == null) { validFlag = false }
+
+                return validFlag;
+            } 
+
+            if (validate())
+            {   
+                        
+            var newFriend = {
+                name: $("#nameInput").val().trim(),
+                photo: $("#photoInput").val().trim(),
+                scores: [
+                $("#select1").val(),
+                $("#select2").val(),
+                $("#select3").val(),
+                $("#select4").val(),
+                $("#select5").val(),
+                $("#select6").val(),
+                $("#select7").val(),
+                $("#select8").val(),
+                $("#select9").val(),
+                $("#select10").val()]
+            };
+           
+            newFriend.scores.forEach(function (item, i) {
+                if (item == "1 (Strongly Disagree)") {
+                    newFriend.scores[i] = 1;
+                }
+                if (item == "5 (Strongly Agree)") {
+                    newFriend.scores[i] = 5;
+                }
             });
-
-            $("#submitButton").on("click", function (event) {
-                event.preventDefault();
-                var newFriend = {
-                    name: $("#nameInput").val().trim(),
-                    photo: $("#photoInput").val().trim(),
-                    scores: []
-                };
-                newFriend.scores.push($("#select1").val(), $("#select2").val(), $("#select3").val(), $("#select4").val(), $("#select5").val(),
-                    $("#select6").val(), $("#select7").val(), $("#select8").val(), $("#select9").val(), $("#select10").val());
-
-                newFriend.scores.forEach(function (item, i) {
-                    if (item == "1 (Strongly Disagree)") {
-                        newFriend.scores[i] = 1;
-                    }
-                    if (item == "5 (Strongly Agree)") {
-                        newFriend.scores[i] = 5;
-                    }
-                });
-
+               
                 $.post("/api/friends", newFriend)
                     .then(function (data) {
                         //open modal and show data
-                       // console.log("back in clients " + JSON.stringify(data));
-                       // console.log("back in clients name-->" + data.name);
-                       // console.log("back in clients url-->" + data.photo);
+                        // console.log("back in clients " + JSON.stringify(data));
+                        // console.log("back in clients name-->" + data.name);
+                        // console.log("back in clients url-->" + data.photo);
                         // $('#resultsP').text(data.name);
                         $('#resultModal').modal('show');
                         $('#resultsP').text(data.name);
                         $('#modalImage').attr('src', data.photo);
-                    })
-                      
-            });
-        });
-
-    </script>
+                    }); 
+                }
+                else{
+                    alert("All files are required");
+                }                
+        });   
+    
+</script>
 
 </body>
 
